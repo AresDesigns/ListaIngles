@@ -1,1 +1,396 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Calendario de Inglés</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        thead th, tbody td {
+            padding: 1.5rem 1rem;
+            text-align: left;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        thead th {
+            background-color: #4f46e5;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f9fafb;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        tbody td:first-child {
+            font-weight: 600;
+        }
+        .rounded-tl-2xl { border-top-left-radius: 1rem; }
+        .rounded-tr-2xl { border-top-right-radius: 1rem; }
+        .rounded-bl-2xl { border-bottom-left-radius: 1rem; }
+        .rounded-br-2xl { border-bottom-right-radius: 1rem; }
+
+        @media (max-width: 640px) {
+            thead {
+                display: none;
+            }
+            tbody, tr, td {
+                display: block;
+                width: 100%;
+            }
+            tr {
+                border-bottom: 2px solid #e5e7eb;
+                margin-bottom: 1rem;
+                padding: 1rem 0;
+                background-color: #fff;
+                border-radius: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 1rem;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #4b5563;
+            }
+            .level-header {
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                color: #4f46e5;
+                text-align: center;
+                border-bottom: 2px solid #c7d2fe;
+                padding-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12 lg:p-16">
+    <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-10 lg:p-12">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2 text-indigo-600">Calendario Completo de Estudio</h1>
+        <p class="text-center text-lg text-gray-600 mb-8">Un vistazo rápido a tu plan semanal</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rounded-tl-2xl">Día</th>
+                        <th>Tarea</th>
+                        <th>Tiempo</th>
+                        <th class="rounded-tr-2xl">Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Nivel A1 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha diálogos de saludos. <strong>Speaking:</strong> Repite frases de saludo.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee un diálogo sencillo. <strong>Writing:</strong> Escribe 5 frases presentándote.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha una canción infantil. <strong>Speaking:</strong> Presenta a alguien imaginario.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Estudia el verbo `to be`. <strong>Vocabulary:</strong> Memoriza 10 palabras.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Conversa con un compañero o contigo mismo.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve una película con subtítulos en inglés.</td>
+                        <td data-label="Tiempo">45 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa la gramática y el vocabulario de la semana.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A1</td>
+                    </tr>
+
+                    <!-- Separador de Nivel -->
+                    <tr><td colspan="4" class="py-4"><div class="level-header">Nivel A2</div></td></tr>
+
+                    <!-- Nivel A2 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha un podcast con una historia en pasado. <strong>Speaking:</strong> Describe lo que hiciste ayer.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee una historia corta en pasado. <strong>Writing:</strong> Escribe sobre tu fin de semana pasado.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Ve un video sobre un viaje. <strong>Speaking:</strong> Habla de un viaje que hayas hecho.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Practica la conjugación de verbos regulares. <strong>Vocabulary:</strong> Aprende 10 verbos irregulares.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Pregúntale a un amigo qué hizo ayer.</td>
+                        <td data-label="Tiempo">30 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve una película o serie sin subtítulos en español.</td>
+                        <td data-label="Tiempo">1 hr</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa el pasado simple, verbos y el vocabulario.</td>
+                        <td data-label="Tiempo">45 min</td>
+                        <td data-label="Nivel">A2</td>
+                    </tr>
+
+                    <!-- Separador de Nivel -->
+                    <tr><td colspan="4" class="py-4"><div class="level-header">Nivel B1</div></td></tr>
+
+                    <!-- Nivel B1 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Ve un TED Talk con subtítulos. <strong>Speaking:</strong> Da tu opinión sobre el tema.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee un artículo de opinión. <strong>Writing:</strong> Escribe un párrafo de opinión.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha un debate de un podcast. <strong>Speaking:</strong> Participa en un chat de voz.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Estudia el Presente Perfecto. <strong>Vocabulary:</strong> Aprende 10 expresiones para dar tu opinión.</td>
+                        <td data-label="Tiempo">1 hr</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Participa en un foro en línea.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve una película o serie sin subtítulos.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa la gramática y el vocabulario de la semana.</td>
+                        <td data-label="Tiempo">1 hr</td>
+                        <td data-label="Nivel">B1</td>
+                    </tr>
+
+                    <!-- Separador de Nivel -->
+                    <tr><td colspan="4" class="py-4"><div class="level-header">Nivel B2</div></td></tr>
+
+                    <!-- Nivel B2 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Ve un noticiero. <strong>Speaking:</strong> Resume las noticias.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee un artículo de actualidad. <strong>Writing:</strong> Escribe un informe corto.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha un debate político. <strong>Speaking:</strong> Practica la voz pasiva en oraciones.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Estudia la voz pasiva avanzada. <strong>Vocabulary:</strong> Aprende verbos frasales.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Discute un tema de actualidad con un nativo.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve un documental complejo.</td>
+                        <td data-label="Tiempo">2.5 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa la gramática y el vocabulario.</td>
+                        <td data-label="Tiempo">1.5 hrs</td>
+                        <td data-label="Nivel">B2</td>
+                    </tr>
+                    
+                    <!-- Separador de Nivel -->
+                    <tr><td colspan="4" class="py-4"><div class="level-header">Nivel C1</div></td></tr>
+
+                    <!-- Nivel C1 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha un audiolibro. <strong>Speaking:</strong> Discute la trama y los personajes.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee un capítulo de una novela. <strong>Writing:</strong> Escribe una reseña del libro.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Ve un video de análisis de una película. <strong>Speaking:</strong> Practica `reporting verbs`.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Profundiza en `reporting verbs` avanzados. <strong>Vocabulary:</strong> Aprende `collocations`.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Participa en un club de lectura en línea.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve una obra de teatro o un documental complejo.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa la gramática y el vocabulario de la semana.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">C1</td>
+                    </tr>
+
+                    <!-- Separador de Nivel -->
+                    <tr><td colspan="4" class="py-4"><div class="level-header">Nivel C2</div></td></tr>
+
+                    <!-- Nivel C2 -->
+                    <tr>
+                        <td data-label="Día">Lunes</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Escucha podcasts con acentos difíciles. <strong>Speaking:</strong> Intenta imitar el acento.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Martes</td>
+                        <td data-label="Tarea"><strong>Reading:</strong> Lee un libro con diálogos que imiten acentos. <strong>Writing:</strong> Escribe un guion con diálogos.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Miércoles</td>
+                        <td data-label="Tarea"><strong>Listening:</strong> Ve entrevistas con gente de diferentes países. <strong>Speaking:</strong> Pregúntale a un nativo sobre su acento.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Jueves</td>
+                        <td data-label="Tarea"><strong>Grammar:</strong> Repasa la fonética y los matices. <strong>Vocabulary:</strong> Aprende `slang` y expresiones coloquiales.</td>
+                        <td data-label="Tiempo">3 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Viernes</td>
+                        <td data-label="Tarea"><strong>Práctica Libre:</strong> Participa en una conversación con varios hablantes.</td>
+                        <td data-label="Tiempo">2 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Sábado</td>
+                        <td data-label="Tarea"><strong>Inmersión:</strong> Ve películas de diferentes países de habla inglesa.</td>
+                        <td data-label="Tiempo">4 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Día">Domingo</td>
+                        <td data-label="Tarea"><strong>Repaso:</strong> Repasa la fonética, acentos y vocabulario de la semana.</td>
+                        <td data-label="Tiempo">2.5 hrs</td>
+                        <td data-label="Nivel">C2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
